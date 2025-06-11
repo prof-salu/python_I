@@ -3,25 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site Simples no GitHub Pages</title>
+    <title>Bem-vindo ao Site do Prof. Salu! (Layout em Cards)</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f0f2f5;
             color: #333;
-        }
-        h1 {
-            color: #0056b3;
-        }
-        p {
             line-height: 1.6;
+        }
+        header {
+            background-color: #4a69bd; /* Azul mais escuro para o cabeçalho */
+            color: #ffffff;
+            padding: 50px 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        header h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.1em;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .main-container {
+            max-width: 1200px; /* Largura máxima do conteúdo principal */
+            margin: 40px auto; /* Centraliza e adiciona margem acima e abaixo */
+            padding: 0 20px; /* Espaçamento interno nas laterais */
+            text-align: center;
+        }
+        h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+        .cards-grid {
+            display: grid; /* Habilita o Grid Layout para os cards */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Colunas responsivas */
+            gap: 25px; /* Espaçamento entre os cartões */
+            justify-content: center; /* Centraliza a grade */
+        }
+        .card {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px; /* Cantos arredondados */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            text-align: left;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Transição suave ao passar o mouse */
+        }
+        .card:hover {
+            transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Sombra mais intensa */
+        }
+        .card h3 {
+            color: #3498db; /* Cor azul para os títulos dos cards */
+            margin-top: 0;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .card p {
+            font-size: 0.95em;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        .card a {
+            display: inline-block; /* Faz o link se comportar como um bloco para padding */
+            background-color: #3498db;
+            color: #ffffff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .card a:hover {
+            background-color: #2980b9; /* Cor mais escura no hover */
+        }
+        .footer {
+            margin-top: 50px;
+            padding: 25px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #ffffff;
+            background-color: #2c3e50; /* Rodapé com fundo escuro */
         }
     </style>
 </head>
 <body>
-    <h1>Olá do meu Site Simples!</h1>
-    <p>Esta é uma página HTML básica hospedada no GitHub Pages.</p>
-    <p>É uma ótima maneira de compartilhar projetos, portfólios ou documentação.</p>
+    <header>
+        <h1>Bem-vindo ao Site do Prof. Salu!</h1>
+        <p>Explore o fascinante mundo da programação com guias e recursos em diversas tecnologias.</p>
+    </header>
+
+    <div class="main-container">
+        <h2>Principais Áreas de Conhecimento:</h2>
+        <div class="cards-grid">
+            <div class="card">
+                <h3>Python</h3>
+                <p>Aprenda a linguagem mais popular do mundo para desenvolvimento web, ciência de dados, IA e automação.</p>
+                <a href="python.html">Ver Conteúdo (Em Breve!)</a>
+            </div>
+            <div class="card">
+                <h3>React Native</h3>
+                <p>Crie aplicações móveis nativas para iOS e Android com uma única base de código JavaScript.</p>
+                <a href="react-native.html">Ver Conteúdo (Em Breve!)</a>
+            </div>
+            <div class="card">
+                <h3>Java</h3>
+                <p>Desenvolva sistemas robustos e escaláveis para empresas, backends e aplicações Android.</p>
+                <a href="java.html">Ver Conteúdo (Em Breve!)</a>
+            </div>
+            <div class="card">
+                <h3>Unity</h3>
+                <p>Dê vida às suas ideias com a plataforma líder para desenvolvimento de jogos 2D/3D e realidade virtual.</p>
+                <a href="unity.html">Ver Conteúdo (Em Breve!)</a>
+            </div>
+        </div>
+        <p style="margin-top: 40px; font-size: 1.1em; color: #555;">
+            Este site está em constante evolução. Fique ligado para novos tutoriais e artigos!
+        </p>
+    </div>
+
+    <footer class="footer">
+        Prof. Salu &copy; 2025 - Todos os direitos reservados.
+    </footer>
 </body>
 </html>
